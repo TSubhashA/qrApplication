@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.worker8:radiogroupplus:1.0.1@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9067b97068c2bee0b6415299fe4d5c94/jetified-radiogroupplus-1.0.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9067b97068c2bee0b6415299fe4d5c94/jetified-radiogroupplus-1.0.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9067b97068c2bee0b6415299fe4d5c94/jetified-radiogroupplus-1.0.1/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.worker8/radiogroupplus/1.0.1/a56c01c1671751b1442cfbd30c6ef1f69588c62b/radiogroupplus-1.0.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
