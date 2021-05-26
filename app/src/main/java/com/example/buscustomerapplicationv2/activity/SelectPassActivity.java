@@ -31,8 +31,6 @@ public class SelectPassActivity extends AppCompatActivity {
 
     SpotsDialog progressDialog;
 
-    ProgressBar progressBar;
-
     MyArrayAdapter myArrayAdapter;
 
     MyTicketAdapter adapter;
@@ -52,9 +50,9 @@ public class SelectPassActivity extends AppCompatActivity {
 
         cd = new ConnectionDetector(this);
 
-        noPassAvailableTV=findViewById(R.id.no_pass_available);
+        noPassAvailableTV = findViewById(R.id.no_pass_available);
 
-        myArrayAdapter=new MyArrayAdapter(this);
+        myArrayAdapter = new MyArrayAdapter(this);
 
         list = new ArrayList<>();
 
