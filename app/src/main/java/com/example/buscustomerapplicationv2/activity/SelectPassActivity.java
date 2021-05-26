@@ -6,6 +6,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -34,7 +36,7 @@ public class SelectPassActivity extends AppCompatActivity {
     MyArrayAdapter myArrayAdapter;
 
     MyTicketAdapter adapter;
-    List<Model_ListSjt_ResponsePayload> list;
+    List<String> list;
     LinearLayout retryLayout;
 
     @Override
@@ -51,19 +53,46 @@ public class SelectPassActivity extends AppCompatActivity {
         cd = new ConnectionDetector(this);
 
         noPassAvailableTV = findViewById(R.id.no_pass_available);
-
-        myArrayAdapter = new MyArrayAdapter(this);
-
         list = new ArrayList<>();
+        myArrayAdapter = new MyArrayAdapter(this,list);
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(recyclerView.getContext(), linearLayoutManager.getOrientation());
         recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.addItemDecoration(dividerItemDecoration);
-        recyclerView.setAdapter(adapter);
+        recyclerView.setAdapter(myArrayAdapter);
         recyclerView.setHasFixedSize(true);
 
+        addData();
+
+    }
+
+    private void addData() {
+
+        list.add("1");
+        list.add("1");
+        list.add("1");
+        list.add("1");
+        list.add("1");
+        list.add("1");
+        list.add("1");
+        list.add("1");
+        list.add("1");
+        list.add("1");
+        list.add("1");
+        list.add("1");
+        list.add("1");
+        list.add("1");
+        list.add("1");
+        list.add("1");
+        myArrayAdapter.notifyDataSetChanged();
+        
+        if(!list.isEmpty()){
+            noPassAvailableTV.setVisibility(View.GONE);
+        }
+
+        Log.w("SelectPass","DataUpdated");
     }
 
     @Override

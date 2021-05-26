@@ -12,13 +12,17 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.buscustomerapplicationv2.R;
 
+import java.util.List;
+
 public class MyArrayAdapter extends RecyclerView.Adapter<MyArrayAdapter.ViewHolder> {
 
     private static final String TAG = MyArrayAdapter.class.getSimpleName() ;
     private final Context context;
 
-    public MyArrayAdapter(Context context) {
+    List<String> list;
+    public MyArrayAdapter(Context context,List<String> list) {
         this.context = context;
+        this.list=list;
     }
 
 
@@ -42,7 +46,7 @@ public class MyArrayAdapter extends RecyclerView.Adapter<MyArrayAdapter.ViewHold
 
     @Override
     public int getItemCount() {
-        return 10;
+        return list.size();
     }
 
 
@@ -50,16 +54,16 @@ public class MyArrayAdapter extends RecyclerView.Adapter<MyArrayAdapter.ViewHold
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         public final TextView passNameTV;
-        public final TextView routeApplicableTV;
-        public final TextView remainingTV;
+//        public final TextView routeApplicableTV;
+//        public final TextView remainingTV;
         public final TextView expiryTV;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
             passNameTV=itemView.findViewById(R.id.pass_name_element);
-            routeApplicableTV=itemView.findViewById(R.id.route_element);
-            remainingTV=itemView.findViewById(R.id.trips_element);
+//            routeApplicableTV=itemView.findViewById(R.id.route_element);
+//            remainingTV=itemView.findViewById(R.id.trips_element);
             expiryTV=itemView.findViewById(R.id.status_element);
 
         }

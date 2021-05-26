@@ -15,6 +15,15 @@
 
         <!--        <include layout="@layout/header" />-->
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <include layout="@layout/header" />
+
+        </LinearLayout>
+
         <TextView
             android:id="@+id/no_pass_available"
             android:layout_width="match_parent"
@@ -32,6 +41,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             tools:listitem="@layout/pass_element"
+            android:scrollbars="none"
             />
     </LinearLayout>
 
